@@ -1,0 +1,372 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 10, 10, 10;
+  --background-end-rgb: 0, 0, 0;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+/* SVG Stroke Drawing Animation with Fade Cycle */
+@keyframes draw {
+  0% {
+    stroke-dashoffset: var(--path-length, 1000);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes draw-cyan {
+  0% {
+    stroke-dashoffset: var(--path-length, 1000);
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  85% {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes draw-purple {
+  0% {
+    stroke-dashoffset: var(--path-length, 1000);
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  75% {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    opacity: 0;
+  }
+}
+
+.animate-draw {
+  animation: draw 20s ease-in-out infinite;
+}
+
+/* SVG path animations with different timing */
+.animate-draw path {
+  animation: draw 20s ease-in-out infinite;
+}
+
+/* Blue gradient paths - staggered timing */
+.animate-draw path:nth-of-type(1) { 
+  animation-delay: 0s; 
+  animation-duration: 6s;
+}
+.animate-draw path:nth-of-type(2) { 
+  animation-delay: 0.5s; 
+  animation-duration: 6s;
+}
+.animate-draw path:nth-of-type(3) { 
+  animation-delay: 1s; 
+  animation-duration: 6s;
+}
+.animate-draw path:nth-of-type(4) { 
+  animation-delay: 1.5s; 
+  animation-duration: 6s;
+}
+.animate-draw path:nth-of-type(5) { 
+  animation-delay: 2s; 
+  animation-duration: 6s;
+}
+.animate-draw path:nth-of-type(6) { 
+  animation-delay: 2.5s; 
+  animation-duration: 6s;
+}
+.animate-draw path:nth-of-type(7) { 
+  animation-delay: 3s; 
+  animation-duration: 6s;
+}
+.animate-draw path:nth-of-type(8) { 
+  animation-delay: 3.5s; 
+  animation-duration: 6s;
+}
+.animate-draw path:nth-of-type(9) { 
+  animation-delay: 4s; 
+  animation-duration: 6s;
+}
+.animate-draw path:nth-of-type(10) { 
+  animation-delay: 4.5s; 
+  animation-duration: 6s;
+}
+.animate-draw path:nth-of-type(11) { 
+  animation-delay: 5s; 
+  animation-duration: 6s;
+}
+.animate-draw path:nth-of-type(12) { 
+  animation-delay: 5.5s; 
+  animation-duration: 6s;
+}
+.animate-draw path:nth-of-type(13) { 
+  animation-delay: 6s; 
+  animation-duration: 6s;
+}
+.animate-draw path:nth-of-type(14) { 
+  animation-delay: 6.5s; 
+  animation-duration: 6s;
+}
+.animate-draw path:nth-of-type(15) { 
+  animation-delay: 7s; 
+  animation-duration: 6s;
+}
+
+/* Additional paths for more curved lines */
+.animate-draw path:nth-of-type(16) { 
+  animation-delay: 7.5s; 
+  animation-duration: 6s;
+}
+.animate-draw path:nth-of-type(17) { 
+  animation-delay: 8s; 
+  animation-duration: 6s;
+}
+.animate-draw path:nth-of-type(18) { 
+  animation-delay: 8.5s; 
+  animation-duration: 6s;
+}
+.animate-draw path:nth-of-type(19) { 
+  animation-delay: 9s; 
+  animation-duration: 6s;
+}
+.animate-draw path:nth-of-type(20) { 
+  animation-delay: 9.5s; 
+  animation-duration: 6s;
+}
+.animate-draw path:nth-of-type(21) { 
+  animation-delay: 10s; 
+  animation-duration: 6s;
+}
+.animate-draw path:nth-of-type(22) { 
+  animation-delay: 10.5s; 
+  animation-duration: 6s;
+}
+.animate-draw path:nth-of-type(23) { 
+  animation-delay: 11s; 
+  animation-duration: 6s;
+}
+.animate-draw path:nth-of-type(24) { 
+  animation-delay: 11.5s; 
+  animation-duration: 6s;
+}
+.animate-draw path:nth-of-type(25) { 
+  animation-delay: 12s; 
+  animation-duration: 6s;
+}
+.animate-draw path:nth-of-type(26) { 
+  animation-delay: 12.5s; 
+  animation-duration: 6s;
+}
+.animate-draw path:nth-of-type(27) { 
+  animation-delay: 13s; 
+  animation-duration: 6s;
+}
+.animate-draw path:nth-of-type(28) { 
+  animation-delay: 13.5s; 
+  animation-duration: 6s;
+}
+.animate-draw path:nth-of-type(29) { 
+  animation-delay: 14s; 
+  animation-duration: 6s;
+}
+.animate-draw path:nth-of-type(30) { 
+  animation-delay: 14.5s; 
+  animation-duration: 6s;
+}
+.animate-draw path:nth-of-type(31) { 
+  animation-delay: 15s; 
+  animation-duration: 6s;
+}
+.animate-draw path:nth-of-type(32) { 
+  animation-delay: 15.5s; 
+  animation-duration: 6s;
+}
+.animate-draw path:nth-of-type(33) { 
+  animation-delay: 16s; 
+  animation-duration: 6s;
+}
+.animate-draw path:nth-of-type(34) { 
+  animation-delay: 16.5s; 
+  animation-duration: 6s;
+}
+.animate-draw path:nth-of-type(35) { 
+  animation-delay: 17s; 
+  animation-duration: 6s;
+}
+.animate-draw path:nth-of-type(36) { 
+  animation-delay: 17.5s; 
+  animation-duration: 6s;
+}
+.animate-draw path:nth-of-type(37) { 
+  animation-delay: 18s; 
+  animation-duration: 6s;
+}
+.animate-draw path:nth-of-type(38) { 
+  animation-delay: 18.5s; 
+  animation-duration: 6s;
+}
+.animate-draw path:nth-of-type(39) { 
+  animation-delay: 19s; 
+  animation-duration: 6s;
+}
+.animate-draw path:nth-of-type(40) { 
+  animation-delay: 19.5s; 
+  animation-duration: 6s;
+}
+
+/* Cyan glow paths - different timing */
+.animate-draw g path {
+  animation: draw-cyan 7s ease-in-out infinite;
+}
+
+.animate-draw g:nth-of-type(1) path {
+  animation-delay: 0.3s;
+  animation-duration: 5s;
+}
+
+.animate-draw g:nth-of-type(2) path {
+  animation-delay: 0.8s;
+  animation-duration: 5s;
+}
+
+.animate-draw g:nth-of-type(3) path {
+  animation-delay: 1.3s;
+  animation-duration: 5s;
+}
+
+.animate-draw g:nth-of-type(4) path {
+  animation-delay: 1.8s;
+  animation-duration: 5s;
+}
+
+.animate-draw g:nth-of-type(5) path {
+  animation-delay: 2.3s;
+  animation-duration: 5s;
+}
+
+/* Fragment paths - faster timing */
+.animate-draw .fragment {
+  animation: draw 4s ease-in-out infinite;
+}
+
+.animate-draw .fragment:nth-of-type(1) {
+  animation-delay: 0.2s;
+}
+
+.animate-draw .fragment:nth-of-type(2) {
+  animation-delay: 0.4s;
+}
+
+.animate-draw .fragment:nth-of-type(3) {
+  animation-delay: 0.6s;
+}
+
+.animate-draw .fragment:nth-of-type(4) {
+  animation-delay: 0.8s;
+}
+
+/* Purple paths - slower timing */
+.animate-draw path[stroke="#434979"] {
+  animation: draw-purple 10s ease-in-out infinite;
+}
+
+.animate-draw path[stroke="#434979"]:nth-of-type(1) {
+  animation-delay: 1s;
+}
+
+.animate-draw path[stroke="#434979"]:nth-of-type(2) {
+  animation-delay: 2s;
+}
+
+.animate-draw path[stroke="#434979"]:nth-of-type(3) {
+  animation-delay: 3s;
+}
+
+/* Pulse animation for glow effects */
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.8; }
+}
+
+.animate-draw g {
+  animation: pulse-glow 4s ease-in-out infinite;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .animate-draw {
+    animation-duration: 6s;
+  }
+  
+  .animate-draw path {
+    animation-duration: 4s;
+  }
+  
+  .animate-draw g path {
+    animation-duration: 3s;
+  }
+}
+
+/* Custom animations */
+@keyframes glow-text {
+  0%, 100% {
+    text-shadow: 0 0 20px rgba(92, 212, 212, 0.5);
+  }
+  50% {
+    text-shadow: 0 0 30px rgba(92, 212, 212, 0.8), 0 0 40px rgba(92, 212, 212, 0.6);
+  }
+}
+
+@keyframes glow-text-subtle {
+  0%, 100% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* Apply animations */
+.animate-glow-text {
+  animation: glow-text 3s ease-in-out infinite;
+}
+
+.animate-glow-text-subtle {
+  animation: glow-text-subtle 4s ease-in-out infinite;
+}
+
+.bg-radial-gradient {
+  background: radial-gradient(ellipse at center, transparent 0%, transparent 50%, rgba(10, 10, 10, 0.7) 100%);
+}

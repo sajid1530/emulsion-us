@@ -1,0 +1,10 @@
+node_modules/
+dist/
+build/
+.next/
+*.gz
+*.zip
+*.log
+.env
+.DS_Store
+.cache/
